@@ -73,6 +73,7 @@ const Navbar = () => {
 
             {/* Auth Section */}
             {user ? (
+                        
               <div className="relative">
                 <button
                   onClick={() => setIsProfileOpen(!isProfileOpen)}
@@ -173,6 +174,7 @@ const Navbar = () => {
                   </div>
                   <span className="font-medium">{user.username}</span>
                 </div>
+                <NotificationCenter />
                 {user.role === 'admin' && (
                   <Link to="/admin" className="block py-2 text-gray-700 hover:text-sky-600">
                     Admin Panel
