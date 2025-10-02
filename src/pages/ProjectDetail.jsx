@@ -88,7 +88,12 @@ const ProjectDetail = () => {
        src={`${import.meta.env.VITE_API_URL.replace('/api','')}${project.images[currentImageIndex].url}`}
        alt={project.images[currentImageIndex].alt || project.name}
        className="w-full h-full object-cover"
-       onError={e => { e.target.onerror = null; e.target.src = '/placeholder.png'; }}
+       // Update the onError handler to use an online service
+onError={(e) => { 
+  e.target.onerror = null; 
+  e.target.src = 'https://via.placeholder.com/300x200/f3f4f6/9ca3af?text=No+Image'; 
+}}
+
      />
                 {project.images.length > 1 && (
                   <>
@@ -133,7 +138,12 @@ const ProjectDetail = () => {
              src={`${import.meta.env.VITE_API_URL.replace('/api','')}${img.url}`}
              alt={img.alt || project.name}
              className="w-full h-full object-cover"
-             onError={e => { e.target.onerror = null; e.target.src = '/placeholder.png'; }}
+             // Update the onError handler to use an online service
+onError={(e) => { 
+  e.target.onerror = null; 
+  e.target.src = 'https://via.placeholder.com/300x200/f3f4f6/9ca3af?text=No+Image'; 
+}}
+
            />
                     </button>
                   ))}
