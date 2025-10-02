@@ -251,7 +251,7 @@ const Dashboard = () => {
     // Update the onError handler to use an online service
 onError={(e) => { 
   e.target.onerror = null; 
-  e.target.src = 'https://via.placeholder.com/300x200/f3f4f6/9ca3af?text=No+Image'; 
+  e.target.src = 'https://www.vecteezy.com/free-photos/plain-white-background'; 
 }}
 
   />
